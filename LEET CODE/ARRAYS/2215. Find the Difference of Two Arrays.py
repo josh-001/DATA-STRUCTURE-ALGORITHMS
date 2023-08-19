@@ -50,3 +50,25 @@ class Solution:
 
 ##### Lengthy process
                     ### should change to set and implement##
+
+
+
+
+
+                                      ### USING SET ###
+
+
+
+class Solution:
+    def findDifference(self, nums1: List[int], nums2: List[int]) -> List[List[int]]:
+        set1=set(nums1)
+        set2=set(nums2)
+        x=[[],[]]
+        for i in set1:
+            if i not in set2:
+                x[0].append(i)
+        for i in set2:
+            if i not in set1:
+                x[1].append(i)
+        return x
+        

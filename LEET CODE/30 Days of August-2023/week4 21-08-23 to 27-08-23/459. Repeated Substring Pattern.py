@@ -16,7 +16,7 @@
 # Input: s = "abcabcabcabc"
 # Output: true
 # Explanation: It is the substring "abc" four times or the substring "abcabc" twice.
-
+##ERROR##
 class Solution:
     def repeatedSubstringPattern(self, s: str) -> bool:
         x=""
@@ -35,5 +35,6 @@ class Solution:
             return True
         else:
             return False
-  ##ERROR##
   
+  a=(s+s)[1:-1]
+        return s in a

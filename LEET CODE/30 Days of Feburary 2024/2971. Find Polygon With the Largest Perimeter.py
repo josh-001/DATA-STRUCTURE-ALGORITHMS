@@ -8,4 +8,11 @@ class Solution:
                 res=max(res,sumt+i)
             sumt=sumt+i
         return res
-        
+        ### BACK TRACKING ##
+        nums.sort()
+        x=sum(nums)
+        for i in range(len(nums)-1,-1,-1):
+            x=x-nums[i]
+            if nums[i]<x:
+                return x+nums[i]
+        return -1
